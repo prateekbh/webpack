@@ -1403,6 +1403,10 @@ export interface StatsOptions {
 	 */
 	performance?: boolean;
 	/**
+	 * preset for the default values
+	 */
+	preset?: boolean | string;
+	/**
 	 * show exports provided by modules
 	 */
 	providedExports?: boolean;
@@ -1442,6 +1446,7 @@ export interface StatsOptions {
 	 * Suppress warnings that match the specified filters. Filters can be Strings, RegExps or Functions
 	 */
 	warningsFilter?: FilterTypes;
+	[k: string]: any;
 }
 /**
  * This interface was referenced by `WebpackOptions`'s JSON-Schema

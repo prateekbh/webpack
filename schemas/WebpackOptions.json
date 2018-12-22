@@ -1749,7 +1749,7 @@
     },
     "StatsOptions": {
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "all": {
           "description": "fallback value for stats options when an option is not defined (has precedence over local webpack defaults)",
@@ -1940,6 +1940,17 @@
         "performance": {
           "description": "add performance hint flags",
           "type": "boolean"
+        },
+        "preset": {
+          "description": "preset for the default values",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "string"
+            }
+          ]
         },
         "providedExports": {
           "description": "show exports provided by modules",
